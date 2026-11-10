@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Editor error | The Pixel
+{% endblock %}
+
+{% block main %}
+<main class="auth-error-page">
+    <section class="auth-error-card" role="alert" aria-labelledby="error-heading">
+        <div class="auth-error-icon" aria-hidden="true">!</div>
+        <p class="auth-error-eyebrow">Photo editor</p>
+        <h1 id="error-heading">Unable to edit photo</h1>
+        <p class="auth-error-message">{{ message }}</p>
+        <div class="auth-error-actions">
+            {% if retry_url == url_for('back') %}
+            <form class="auth-error-action-form" action="{{ retry_url }}" method="post">
+                <button class="btn btn-primary auth-error-primary" type="submit">Back to the editor</button>
+            </form>
+            {% else %}
+            <a class="btn btn-primary auth-error-primary" href="{{ retry_url }}">Back to the editor</a>
+            {% endif %}
+            <form class="auth-error-action-form" action="{{ url_for('back') }}" method="post">
+                <input type="hidden" name="destination" value="home">
+                <button class="btn btn-link auth-error-secondary" type="submit">Back to home</button>
+            </form>
+        </div>
+    </section>
+</main>
+{% endblock %}

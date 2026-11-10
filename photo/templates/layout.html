@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+
+    <title>{% block title %}The pixel{% endblock %}</title>
+
+    <!-- Bootswatch CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/litera/bootstrap.min.css" 
+    rel="stylesheet">  
+
+    <!-- Bootstrap JavaScript -->                                                                             
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- https://favicon.io/emoji-favicons/money-bag/ -->
+    <link href="/static/favicon.ico" rel="icon">
+
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    {% block main %}
+    {% endblock %}
+</body>
+</html>
