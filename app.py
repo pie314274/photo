@@ -28,6 +28,8 @@ db = SQL("sqlite:///photo.db")
 # sensitive user data in browser cookies.
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+app.confing["SESSION_FILE_DIR"] = "/tmp/flask_session"
+
 Session(app)
 
 
