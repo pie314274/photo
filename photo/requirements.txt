@@ -1,4 +1,0 @@
-Flask
-Flask-Session
-cs50
-Pillow
